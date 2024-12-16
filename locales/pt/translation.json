@@ -1,0 +1,24 @@
+{
+  "login": {
+    "title": "Login - Agendero",
+    "welcome": "Bem-vindo ao Agendero",
+    "phone": "Telefone",
+    "continue": "Continuar"
+  },
+  "verify": {
+    "title": "Verificação - Agendero",
+    "enterCode": "Digite o código de verificação",
+    "verify": "Verificar"
+  },
+  "dashboard": {
+    "title": "Dashboard - Agendero",
+    "welcome": "Bem-vindo ao seu Dashboard"
+  },
+  "menu": {
+    "home": "Início",
+    "agenda": "Agenda",
+    "company": "Companhia",
+    "settings": "Configurações",
+    "logout": "Sair"
+  }
+}

@@ -1,0 +1,182 @@
+/* Reset e estilos gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f8f9fa;
+}
+
+/* Layout principal */
+.main-container {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 250px;
+    background: white;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+    padding: 20px 0;
+    height: 100vh;
+    position: fixed;
+    transition: transform 0.3s ease;
+}
+
+.sidebar-header {
+    padding: 0 20px 20px 20px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.sidebar-header h1 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #2c3e50;
+    margin: 0;
+}
+
+/* Menu de navegação */
+.nav-menu {
+    list-style: none;
+    padding: 20px 0;
+}
+
+.nav-item {
+    margin: 5px 0;
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    padding: 12px 20px;
+    color: #555;
+    text-decoration: none;
+    transition: all 0.3s;
+    border-left: 3px solid transparent;
+}
+
+.nav-link i {
+    color: #3498db;
+    width: 20px;
+    margin-right: 10px;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    background-color: #f8f9fa;
+    color: #2c3e50;
+}
+
+.nav-link:hover i {
+    color: #2980b9;
+}
+
+.nav-item.active .nav-link {
+    background-color: #f8f9fa;
+    border-left-color: #3498db;
+    color: #2c3e50;
+    font-weight: 500;
+}
+
+/* Conteúdo principal */
+.content {
+    margin-left: 250px;
+    padding: 30px;
+    flex: 1;
+    background: #fff;
+    border-radius: 10px;
+    margin: 20px 20px 20px 270px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.content h2 {
+    color: #2c3e50;
+    margin-bottom: 25px;
+    font-weight: 600;
+}
+
+/* Menu mobile */
+.mobile-menu-toggle {
+    display: none;
+    background: white;
+    border: none;
+    font-size: 24px;
+    color: #2c3e50;
+    padding: 10px;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .sidebar {
+        transform: translateX(-250px);
+        z-index: 999;
+    }
+
+    .sidebar.active {
+        transform: translateX(0);
+    }
+
+    .mobile-menu-toggle {
+        display: block;
+    }
+
+    .content {
+        margin: 20px;
+        padding-top: 60px;
+    }
+}
+
+/* Estilos específicos para o calendário */
+#calendar {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.fc-toolbar-title {
+    color: #2c3e50 !important;
+    font-size: 1.5em !important;
+}
+
+.fc-button-primary {
+    background-color: #3498db !important;
+    border-color: #3498db !important;
+}
+
+.fc-button-primary:hover {
+    background-color: #2980b9 !important;
+    border-color: #2980b9 !important;
+}
+
+.fc-daygrid-day {
+    cursor: pointer;
+}
+
+.fc-event {
+    cursor: pointer;
+    padding: 2px 5px;
+    border-radius: 3px;
+}
+
+/* Animações */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.content {
+    animation: fadeIn 0.3s ease-in-out;
+}
